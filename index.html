@@ -1,15 +1,29 @@
 <html>
-
 <head>
-    <link rel="stylesheet" type="text/css" href="pinky.css">
-    <script src='node_modules/angular/angular.min.js'></script>
-    <script src='pinky.js'></script>
+  <title>Pinky</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 </head>
+<body>
+<div id="content"></div>
+<script type="text/babel">
 
-<body ng-app="pinky">
-    <div ng-controller="pinkyController">
-        <div pinky-field></div>
-    </div>
+  let PinkyField = React.createClass({
+    render: function () {
+      return (
+          <div>
+            <span>Test</span>
+          </div>
+      )
+    }
+  });
+
+  ReactDOM.render(
+      <PinkyField />,
+      document.getElementById('content')
+  );
+
+</script>
 </body>
-
 </html>
